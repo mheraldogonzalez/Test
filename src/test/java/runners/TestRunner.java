@@ -6,15 +6,15 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",   // Ruta donde están los archivos .feature
-        glue = {"steps"},                           // Paquete donde están los definiciones de pasos
+        features = "src/test/resources/features",
+        glue = {"stepDefinitions"},
         plugin = {
-                "pretty",                           // Salida  en consola
-                "html:target/cucumber-report.html", // Reporte HTML
-                "json:target/cucumber-report.json"  // Reporte JSON (opcional, útil para integraciones)
+                "pretty",
+                "html:target/cucumber-reports.html",
+                "json:target/cucumber.json"
         },
-        monochrome = true,                          // Consola más limpia (sin caracteres raros)
-        tags = "@Compra"                            //  filtrar escenarios etiquetas (opcional)
+        monochrome = true,
+        tags = "@RecuperarContrasena"
 )
 public class TestRunner {
 }
