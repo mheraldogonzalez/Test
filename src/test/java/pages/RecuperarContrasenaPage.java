@@ -1,5 +1,5 @@
 package pages;
-
+import locators.locator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,17 +19,17 @@ public class RecuperarContrasenaPage {
     }
 
     public void ingresarRut(String rut) {
-        driver.findElement(rutInput).sendKeys(rut);
+        driver.findElement(locator.recuperarContrasena.rutInput).sendKeys(rut);
     }
 
     public void confirmarSolicitud() {
-        driver.findElement(tipodeRecuperacionEmail).click();
-        driver.findElement(tipodeRecuperacionMensaje).click();
+        driver.findElement(locator.recuperarContrasena.tipodeRecuperacionEmail).click();
+        driver.findElement(locator.recuperarContrasena.tipodeRecuperacionMensaje).click();
 
     }
 
     public String obtenerMensaje() {
-        driver.findElement(btnVolver).click();
+        driver.findElement(locator.recuperarContrasena.btnVolver).click();
         return driver.findElement(mensajeConfirmacion).getText();
     }
 }

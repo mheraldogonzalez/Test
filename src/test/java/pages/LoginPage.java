@@ -1,12 +1,12 @@
 package pages;
-
+import locators.locator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
     WebDriver driver;
 
-    By linkOlvidaste = By.xpath("//*[@id='form-buttons']/a");
+ //   By linkOlvidaste = By.xpath("//*[@id='form-buttons']/a");
 
 
     public LoginPage(WebDriver driver) {
@@ -18,6 +18,6 @@ public class LoginPage {
     }
 
     public void clicOlvidaste() {
-        driver.findElement(linkOlvidaste).click();
+        driver.findElement(locator.login.linkOlvidaste).click();
     }
 }
