@@ -14,7 +14,8 @@ import io.cucumber.junit.CucumberOptions;
                 "html:target/evidencia/TestRunner.html",
                 "json:target/evidencia/cucumber.json"
         },
-        monochrome = true,
+        monochrome =
+                true,
         tags = "@RecuperarContrasena"
 )
 public class TestRunner {
