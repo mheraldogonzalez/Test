@@ -7,17 +7,15 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"steps"},
+        glue = {"steps", "Hooks", "reporting"},
         plugin = {
                 "pretty",
-                // nombre fijo, luego lo renombramos en Hooks
                 "html:target/evidencia/TestRunner.html",
-                "json:target/evidencia/cucumber.json"
+                "json:target/evidencia/cucumber.json",
+                "reporting.ReportConfig"   // <- aquí registramos tu listener
         },
-        monochrome =
-                true,
+        monochrome = true,
         tags = "@RecuperarContrasena"
 )
 public class TestRunner {
-        // No necesitas lógica aquí, el renombrado lo hará Hooks
 }

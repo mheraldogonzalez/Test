@@ -12,13 +12,15 @@ public class RecuperarContrasenaPage {
     // Usando XPath con comillas simples dentro del atributo
     By btnVolver = By.xpath("//*[@id='form-buttons']/a");
     By submitBtn = By.id("submit-button");
-    By mensajeConfirmacion = By.id("mensajeConfirmacion");
+   // By mensajeConfirmacion = By.id("mensajeConfirmacion");
 
     public RecuperarContrasenaPage(WebDriver driver) {
+
         this.driver = driver;
     }
 
     public void ingresarRut(String rut) {
+
         driver.findElement(locator.recuperarContrasena.rutInput).sendKeys(rut);
     }
 
@@ -28,8 +30,8 @@ public class RecuperarContrasenaPage {
 
     }
 
-    public String obtenerMensaje() {
+    public void regresarLogin() {
         driver.findElement(locator.recuperarContrasena.btnVolver).click();
-        return driver.findElement(mensajeConfirmacion).getText();
+        driver.findElement(locator.login.inputUsername);
     }
 }

@@ -8,5 +8,5 @@ Feature: Recuperar contraseña
     Given que el usuario está en la página de login
     When hace clic en "¿Olvidaste tu contraseña?"
     And ingresa su rut válido
-    And confirma la solicitud
-    Then debería ver un mensaje de confirmación indicando que se envió el correo de recuperación
+    And confirma Seleccion de metodos de recuperacion y Boton Back
+    Then debería ver el Login del sitio

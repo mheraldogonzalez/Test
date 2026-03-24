@@ -6,7 +6,7 @@ public class locator {
    public class login{
         // Campos de login
        public static By linkOlvidaste = By.xpath("//*[@id='form-buttons']/a");
-
+       public static By inputUsername = By.id("username");
        // Mensaje de bienvenida
         public static final By WELCOME_MSG = By.id("welcome");
     }

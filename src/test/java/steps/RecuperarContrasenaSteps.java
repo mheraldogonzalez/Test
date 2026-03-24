@@ -35,15 +35,14 @@ public class RecuperarContrasenaSteps {
         recuperarPage.ingresarRut("8559687-K");
     }
 
-    @When("confirma la solicitud")
+    @When("confirma Seleccion de metodos de recuperacion y Boton Back")
     public void confirmarSolicitud() {
         recuperarPage.confirmarSolicitud();
     }
 
-    @Then("debería ver un mensaje de confirmación indicando que se envió el correo de recuperación")
-    public void validarMensaje() {
-        String mensaje = recuperarPage.obtenerMensaje();
-        assert mensaje.contains("correo de recuperación");
+    @Then("debería ver el Login del sitio")
+    public void regresarLogin() {
+        recuperarPage.regresarLogin();
         driver.quit();
     }
 }
