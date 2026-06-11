@@ -16,7 +16,11 @@ public class LoginPage {
     public void abrirPortal() {
         driver.get("https://portales.confuturo.cl/dev-clientes");
     }
+public void login(String rut, String contrasena) {
+        driver.findElement(locator.login.inputUsername).sendKeys(rut);
+        driver.findElement(locator.login.inputPassword).sendKeys(contrasena);
 
+}
     public void clicOlvidaste() {
         driver.findElement(locator.login.linkOlvidaste).click();
     }
